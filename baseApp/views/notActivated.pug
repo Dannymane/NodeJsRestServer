@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  if user
+    p 
+      ul
+        li= "user " + user.username + " is not activated!"
+        li= "activated: " + user.activated

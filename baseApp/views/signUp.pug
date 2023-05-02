@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    #login
+        .container
+            #login-row.row.justify-content-center.align-items-center
+                .col-md-3
+                #login-column.col-md-6
+                    if (message_signup)
+                        .alert.alert-danger.text-center
+                            strong= message_signup
+                    #login-box.col-md-12
+                        form#login-form.form(action='/sign/up' method='post')
+                            h3.text-center.text-info Sign up
+                            .form-group
+                                label.text-info(for='username') Username:
+                                br
+                                input#username.form-control(type='text' name='username')
+                            .form-group
+                                label.text-info(for='password') Password:
+                                br
+                                input#password.form-control(type='password' name='password')
+                            .form-group
+                                label.text-info(for='email') E-mail:
+                                br
+                                input#password.form-control(type='text' name='email')
+                            .form-group
+                                input.btn.btn-info.btn-md(type='submit' name='submit' value='Sign up')
+                .col-md-3

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h3 session ID: #{idSesji}
+  h4 Counted visits: #{odwiedziny}
+  p Contents of req.session.cookie czyli ciasteczka:
+    ul
+      for val, key in ciasteczko
+        li #{key}: #{val}
+  p Contents of req.session.cookie.data:
+    ul
+      for val, key in data
+        li #{key}: #{val}
+  if passport
+    p Contents of req.session.passport
+      ul
+        for val, key in passport
+          li #{key}: #{val}
+  if token
+    p Contents of req.headers.authorization
+      ul
+        li #{token}

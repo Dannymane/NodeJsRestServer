@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    p 
+      strong Free access pages 
+    a(href="/") Main page
+    br
+    a(href="/users/reset") users/reset
+    |  - reset user database, creates two defaul activated user, login: admin, password: stud234
+    br
+    a(href="/login") login
+    |  - sign in user
+    br
+    a(href="/sesja") session
+    |  - information about browser session
+    br
+    a(href="/sign/upPage") sign/upPage
+    |  - register new user
+    br
+    a(href="/animals/reset") animals/reset
+    |  - reset animal database, creates two defaul animal
+    p 
+      strong For logged in user pages only
+    a(href="/logout") logout
+    |  - sign out user
+    br
+    a(href="/users") users
+    |  - data about users, JSON format,
+    br
+    |  - user has to be activated
+    br
+    a(href="/animals") animals
+    |  - data about animals, JSON format, 
+    br
+    |  - user has to be activated,
+    br
+    |  - requires token which is sent in headers of each response for logged user, to handle token you have to manually add this token to request authorization header
+    br
+    a(href="/zalogowany") zalogowany
+    |  - all data about user connection: req.user, req.session.passport, res.locals.logInfo
+    hr
+    p= authInfo
+    hr
+    block content

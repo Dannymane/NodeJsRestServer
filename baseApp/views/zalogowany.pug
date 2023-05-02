@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  if passport
+    p Contents of req.session.passport:
+      ul
+        for val, key in passport
+          li #{key}: #{val}
+  if auth_info
+    p Contents of res.locals.authInfo ('Logged in:' + req.user.username):
+      ul: li #{auth_info}
+  if user
+    p C ontents of req.user, pola _id, username, password
+      ul
+        li= "_id: " + user._id
+        li= "username: " + user.username
+        li= "password: " + user.password
+        li= "email: " + user.email
+        li= "activated: " + user.activated

@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "51af55de-2a0e-4766-aa84-82dae52a942a",
+		"name": "Project1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27117594"
+	},
+	"item": [
+		{
+			"name": "LoginInAsAdmin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\":\"admin\",\n  \"password\":\"stud234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SessionInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/sesja",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sesja"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAnimals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NGUyNjk2YjliODc4OWEyOGQxNTk5YSIsImlhdCI6MTY4Mjg3NzkwNywiZXhwIjoxNjgyODc4MjA3fQ.Fk8SQjCMEXCYDd7_8qap2SE6-dpAe-qPt80senZ9vKM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animals",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAnimal 6450de5eef374f6e6abecfe3",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PostAnimal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animals",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAnimalById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTBiZDU2NDY1ZDQyZDdkNDQyNDE0NSIsImlhdCI6MTY4MzAyMTkwNCwiZXhwIjoxNjgzMDIyMjA0fQ.BuFMRMM1VYwQpLp4YXKLKIlxODEa6mrsZBuj-yxS6Vg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/animals/6450df68ef374f6e6abecff4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"animals",
+						"6450df68ef374f6e6abecff4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "animalsToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTBiZDU2NDY1ZDQyZDdkNDQyNDE0NSIsImlhdCI6MTY4MzAxOTIxNCwiZXhwIjoxNjgzMDE5NTE0fQ.NPoQkHsH5Mnlxt9okIP1WwSVKerPnJ0mTBqfJ05_paA"
+		}
+	]
+}
